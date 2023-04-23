@@ -1,7 +1,8 @@
 package com.example.stockexplorer.ui.components
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
@@ -39,7 +40,7 @@ fun DefaultPreview() {
             checked = true,
             onCheckedChange = {},
         )
-        Box(modifier = Modifier.size(height = 10.dp, width = 0.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         MSwitch(
             checked = false,
             onCheckedChange = {},
