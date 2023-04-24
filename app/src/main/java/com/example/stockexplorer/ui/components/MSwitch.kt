@@ -8,26 +8,32 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.stockexplorer.ui.theme.Blue70
+import com.example.stockexplorer.ui.theme.*
 
 @Composable
 fun MSwitch(
+    enabled: Boolean = true,
     checked: Boolean,
     onCheckedChange: (Boolean) -> Unit,
 ) {
     Switch(
+        enabled = enabled,
         checked = checked,
         onCheckedChange = onCheckedChange,
         modifier = Modifier.size(width = 52.dp, height = 32.dp),
         colors = SwitchDefaults.colors(
-            checkedThumbColor = Color.White,
+            checkedThumbColor = Black10,
             checkedTrackColor = Blue70,
-            uncheckedThumbColor = Color.White,
-            uncheckedTrackColor = Color(0xFFF0F0F0), // FIXME: 顏色未定義在 DesignSystem
-            uncheckedBorderColor = Color(0xFFF0F0F0), // FIXME: 待確認顏色
+            uncheckedThumbColor = Black50,
+            uncheckedTrackColor = Black20,
+            uncheckedBorderColor = Black60,
+            disabledCheckedThumbColor = Black10,
+            disabledCheckedTrackColor = Blue40,
+            disabledUncheckedThumbColor = Black70.copy(alpha = 0.38f),
+            disabledUncheckedTrackColor = Black15,
+            disabledUncheckedBorderColor = Black35,
         ),
     )
 }
@@ -42,6 +48,18 @@ fun DefaultPreview() {
         )
         Spacer(modifier = Modifier.height(10.dp))
         MSwitch(
+            checked = false,
+            onCheckedChange = {},
+        )
+        Spacer(modifier = Modifier.height(10.dp))
+        MSwitch(
+            enabled = false,
+            checked = true,
+            onCheckedChange = {},
+        )
+        Spacer(modifier = Modifier.height(10.dp))
+        MSwitch(
+            enabled = false,
             checked = false,
             onCheckedChange = {},
         )
