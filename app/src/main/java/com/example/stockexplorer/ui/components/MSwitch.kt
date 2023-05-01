@@ -17,10 +17,10 @@ import com.example.stockexplorer.ui.theme.*
 @Composable
 fun MSwitch(
     enabled: Boolean = true,
-    checked: Boolean,
+    initialCheckValue: Boolean,
     onCheckedChange: ((Boolean) -> Unit)?,
 ) {
-    val checkedState = remember { mutableStateOf(checked) }
+    val checkedState = remember { mutableStateOf(initialCheckValue) }
 
     Switch(
         enabled = enabled,
@@ -50,24 +50,24 @@ fun MSwitch(
 fun DefaultPreview() {
     Column {
         MSwitch(
-            checked = true,
+            initialCheckValue = true,
             onCheckedChange = {},
         )
         Spacer(modifier = Modifier.height(10.dp))
         MSwitch(
-            checked = false,
-            onCheckedChange = {},
-        )
-        Spacer(modifier = Modifier.height(10.dp))
-        MSwitch(
-            enabled = false,
-            checked = true,
+            initialCheckValue = false,
             onCheckedChange = {},
         )
         Spacer(modifier = Modifier.height(10.dp))
         MSwitch(
             enabled = false,
-            checked = false,
+            initialCheckValue = true,
+            onCheckedChange = {},
+        )
+        Spacer(modifier = Modifier.height(10.dp))
+        MSwitch(
+            enabled = false,
+            initialCheckValue = false,
             onCheckedChange = {},
         )
     }
