@@ -7,6 +7,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -16,12 +18,17 @@ import com.example.stockexplorer.ui.theme.*
 fun MSwitch(
     enabled: Boolean = true,
     checked: Boolean,
-    onCheckedChange: (Boolean) -> Unit,
+    onCheckedChange: ((Boolean) -> Unit)?,
 ) {
+    val checkedState = remember { mutableStateOf(checked) }
+
     Switch(
         enabled = enabled,
-        checked = checked,
-        onCheckedChange = onCheckedChange,
+        checked = checkedState.value,
+        onCheckedChange = {
+            checkedState.value = it
+            onCheckedChange?.invoke(checkedState.value)
+        },
         modifier = Modifier.size(width = 52.dp, height = 32.dp),
         colors = SwitchDefaults.colors(
             checkedThumbColor = Black10,
