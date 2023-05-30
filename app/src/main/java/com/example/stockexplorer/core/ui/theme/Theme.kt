@@ -1,4 +1,4 @@
-package com.example.stockexplorer.ui.theme
+package com.example.stockexplorer.core.ui.theme
 
 import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
