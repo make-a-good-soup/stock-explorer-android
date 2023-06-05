@@ -21,7 +21,6 @@ import com.example.stockexplorer.core.ui.theme.Black60
 import com.example.stockexplorer.core.ui.theme.Black70
 import com.example.stockexplorer.core.ui.theme.Blue40
 import com.example.stockexplorer.core.ui.theme.Blue70
-import com.example.stockexplorer.ui.theme.*
 
 @Composable
 fun MSwitch(
