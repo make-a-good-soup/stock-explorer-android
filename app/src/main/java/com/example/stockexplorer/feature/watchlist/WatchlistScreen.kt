@@ -33,5 +33,5 @@ fun WatchlistScreen(
 @Preview(showBackground = true)
 @Composable
 fun WatchlistScreenPreview() {
-
+    WatchlistScreen()
 }
