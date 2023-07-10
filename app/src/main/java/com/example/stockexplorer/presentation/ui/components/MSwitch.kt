@@ -1,4 +1,4 @@
-package com.example.stockexplorer.ui.components
+package com.example.stockexplorer.presentation.ui.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -12,7 +12,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.stockexplorer.ui.theme.*
+import com.example.stockexplorer.presentation.ui.theme.Black10
+import com.example.stockexplorer.presentation.ui.theme.Black15
+import com.example.stockexplorer.presentation.ui.theme.Black20
+import com.example.stockexplorer.presentation.ui.theme.Black35
+import com.example.stockexplorer.presentation.ui.theme.Black50
+import com.example.stockexplorer.presentation.ui.theme.Black60
+import com.example.stockexplorer.presentation.ui.theme.Black70
+import com.example.stockexplorer.presentation.ui.theme.Blue40
+import com.example.stockexplorer.presentation.ui.theme.Blue70
 
 @Composable
 fun MSwitch(
