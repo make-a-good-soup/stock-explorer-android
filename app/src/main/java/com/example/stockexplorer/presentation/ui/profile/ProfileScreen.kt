@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfileScreen() {
-    // TODO: Implement Watchlist Screen
+    // TODO: Implement ProfileScreen
     Scaffold(
         topBar = {
             TopAppBar(

@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewsScreen() {
-    // TODO: Implement Watchlist Screen
+    // TODO: Implement NewsScreen
     Scaffold(
         topBar = {
             TopAppBar(
